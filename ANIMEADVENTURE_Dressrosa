@@ -2501,7 +2501,7 @@ local function startfarming()
                 SnipeShopNew()
              end)
                 print("send Webhook")
-                task.wait(1.1)
+                task.wait(0.5)
                 warn("OPNew farming")
                 task.wait(7)
                 --7Ds fixportal		
