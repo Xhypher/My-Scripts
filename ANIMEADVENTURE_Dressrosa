@@ -1667,7 +1667,7 @@ local function unitconfig()
         Settings.U1_TotalAmmount = Value
         saveSettings()
     end, {placeholder = Settings.U1_TotalAmmount})
-   [[ Unit1:Cheat("Textbox", "Upgrade Priority", function(Value)
+   --[[ Unit1:Cheat("Textbox", "Upgrade Priority", function(Value)
         Value = tonumber(Value)
         Settings.U1_UpgPro = Value
         saveSettings()
@@ -1677,7 +1677,7 @@ local function unitconfig()
         Settings.U1_UpgWave = Value
         saveSettings()
     end, {placeholder = Settings.U1_UpgWave})
-    [[Unit1:Cheat("Textbox", "Upgrade Cap", function(Value)
+    --[[Unit1:Cheat("Textbox", "Upgrade Cap", function(Value)
         Value = tonumber(Value)
         Settings.U1_UpgCap = Value
         saveSettings()
@@ -1687,8 +1687,8 @@ local function unitconfig()
         Settings.U1_SellWave = Value
         saveSettings()
     end, {placeholder = Settings.U1_SellWave}) 
-    //UNIT 2
-   [[ Unit2:Cheat("Textbox", "Placement Priority", function(Value)
+    --//UNIT 2
+   --[[ Unit2:Cheat("Textbox", "Placement Priority", function(Value)
         Value = tonumber(Value)
         Settings.U2_UnPlace = Value
         saveSettings()
@@ -1703,7 +1703,7 @@ local function unitconfig()
         Settings.U2_TotalAmmount = Value
         saveSettings()
     end, {placeholder = Settings.U2_TotalAmmount})
-    [[Unit2:Cheat("Textbox", "Upgrade Priority", function(Value)
+    --[[Unit2:Cheat("Textbox", "Upgrade Priority", function(Value)
         Value = tonumber(Value)
         Settings.U2_UpgPro = Value
         saveSettings()
@@ -1713,7 +1713,7 @@ local function unitconfig()
         Settings.U2_UpgWave = Value
         saveSettings()
     end, {placeholder = Settings.U2_UpgWave})
-    [[Unit2:Cheat("Textbox", "Upgrade Cap", function(Value)
+    --[[Unit2:Cheat("Textbox", "Upgrade Cap", function(Value)
         Value = tonumber(Value)
         Settings.U2_UpgCap = Value
         saveSettings()
@@ -1724,8 +1724,8 @@ local function unitconfig()
         saveSettings()
     end, {placeholder = Settings.U2_SellWave}) 
     
-    //UNIT 3
-    [[Unit3:Cheat("Textbox", "Placement Priority", function(Value)
+    ---//UNIT 3
+    --[[Unit3:Cheat("Textbox", "Placement Priority", function(Value)
         Value = tonumber(Value)
         Settings.U3_UnPlace = Value
         saveSettings()
@@ -1741,7 +1741,7 @@ local function unitconfig()
         Settings.U3_TotalAmmount = Value
         saveSettings()
     end, {placeholder = Settings.U3_TotalAmmount})
-    [[Unit3:Cheat("Textbox", "Upgrade Priority", function(Value)
+    --[[Unit3:Cheat("Textbox", "Upgrade Priority", function(Value)
         Value = tonumber(Value)
         Settings.U3_UpgPro = Value
         saveSettings()
@@ -1753,7 +1753,7 @@ local function unitconfig()
         saveSettings()
     end, {placeholder = Settings.U3_UpgWave})
     
-    [[Unit3:Cheat("Textbox", "Upgrade Cap", function(Value)
+    --[[Unit3:Cheat("Textbox", "Upgrade Cap", function(Value)
         Value = tonumber(Value)
         Settings.U3_UpgCap = Value
         saveSettings()
@@ -1764,8 +1764,8 @@ local function unitconfig()
         Settings.U3_SellWave = Value
         saveSettings()
     end, {placeholder = Settings.U3_SellWave}) 
-    //UNIT 4
-    [[Unit4:Cheat("Textbox", "Placement Priority", function(Value)
+    --//UNIT 4
+    --[[Unit4:Cheat("Textbox", "Placement Priority", function(Value)
         Value = tonumber(Value)
         Settings.U4_UnPlace = Value
         saveSettings()
@@ -1781,7 +1781,7 @@ local function unitconfig()
         Settings.U4_TotalAmmount = Value
         saveSettings()
     end, {placeholder = Settings.U4_TotalAmmount})
-    [[Unit4:Cheat("Textbox", "Upgrade Priority", function(Value)
+    --[[Unit4:Cheat("Textbox", "Upgrade Priority", function(Value)
         Value = tonumber(Value)
         Settings.U4_UpgPro = Value
         saveSettings()
@@ -1793,7 +1793,7 @@ local function unitconfig()
         saveSettings()
     end, {placeholder = Settings.U4_UpgWave})
     
-    [[Unit4:Cheat("Textbox", "Upgrade Cap", function(Value)
+    --[[Unit4:Cheat("Textbox", "Upgrade Cap", function(Value)
         Value = tonumber(Value)
         Settings.U4_UpgCap = Value
         saveSettings()
@@ -1805,8 +1805,8 @@ local function unitconfig()
         saveSettings()
     end, {placeholder = Settings.U4_SellWave}) 
     
-    //UNIT 5
-    [[Unit5:Cheat("Textbox", "Placement Priority", function(Value)
+    --//UNIT 5
+    --[[Unit5:Cheat("Textbox", "Placement Priority", function(Value)
         Value = tonumber(Value)
         Settings.U5_UnPlace = Value
         saveSettings()
@@ -1822,7 +1822,7 @@ local function unitconfig()
         Settings.U5_TotalAmmount = Value
         saveSettings()
     end, {placeholder = Settings.U5_TotalAmmount})
-    [[Unit5:Cheat("Textbox", "Upgrade Priority", function(Value)
+    --[[Unit5:Cheat("Textbox", "Upgrade Priority", function(Value)
         Value = tonumber(Value)
         Settings.U5_UpgPro = Value
         saveSettings()
@@ -1834,7 +1834,7 @@ local function unitconfig()
         saveSettings()
     end, {placeholder = Settings.U5_UpgWave})
         
-    [[Unit5:Cheat("Textbox", "Upgrade Cap", function(Value)
+    --[[Unit5:Cheat("Textbox", "Upgrade Cap", function(Value)
         Value = tonumber(Value)
         Settings.U5_UpgCap = Value
         saveSettings()
@@ -1845,8 +1845,8 @@ local function unitconfig()
         Settings.U5_SellWave = Value
         saveSettings()
     end, {placeholder = Settings.U5_SellWave}) 
-    //UNIT 6
-    [[Unit6:Cheat("Textbox", "Placement Priority", function(Value)
+    --//UNIT 6
+    --[[Unit6:Cheat("Textbox", "Placement Priority", function(Value)
         Value = tonumber(Value)
         Settings.U6_UnPlace = Value
         saveSettings()
@@ -1862,7 +1862,7 @@ local function unitconfig()
         Settings.U6_TotalAmmount = Value
         saveSettings()
     end, {placeholder = Settings.U6_TotalAmmount})
-    [[Unit6:Cheat("Textbox", "Upgrade Priority", function(Value)
+    --[[Unit6:Cheat("Textbox", "Upgrade Priority", function(Value)
         Value = tonumber(Value)
         Settings.U6_UpgPro = Value
         saveSettings()
@@ -1874,7 +1874,7 @@ local function unitconfig()
         saveSettings()
     end, {placeholder = Settings.U6_UpgWave})
     
-    [[Unit6:Cheat("Textbox", "Upgrade Cap", function(Value)
+    --[[Unit6:Cheat("Textbox", "Upgrade Cap", function(Value)
         Value = tonumber(Value)
         Settings.U6_UpgCap = Value
         saveSettings()
