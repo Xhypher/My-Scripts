@@ -1203,9 +1203,9 @@ end
 ------------------ credits -------------------
 ----------------------------------------------
 local function credits()
-    Developers:Cheat("Label","📝 Scripted by:OTEPPOGI ")    
-    Developers:Cheat("Label","📝 Also thanks to OTEPLAKAS!")    
-    Developers:Cheat("Label","📐 UI By: JOSEPHPOGI")    
+    Developers:Cheat("Label","📝 Scripted by: Arpon AG#6612 & Forever4D#0001 & HOLYSHz#3819 ")    
+    Developers:Cheat("Label","📝 Also thanks to Trapstar#7845, bytenode#9646 for the help!")    
+    Developers:Cheat("Label","📐 UI By: detourious @ v3rmillion.net")    
     Developers:Cheat("Label","🔧 To toggle the script press \" P \"")   
     Developers:Cheat("Button","🔗 Discord Invite", function()
         setclipboard("https://discord.gg/2ttfCfzxut")
@@ -2134,9 +2134,9 @@ function autoload()
     pcall(function()
         local exec = tostring(identifyexecutor())
         if exec == "Synapse X" and Settings.AutoLoadScript then
-            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Xhypher/My-Scripts/main/ANIMEADVENTURE_Dressrosa'))()")
+            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/ArponAG/Scripts/main/AnimeAdventures_v2__Beta.lua'))()")
         elseif exec ~= "Synapse X" and Settings.AutoLoadScript then
-            queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Xhypher/My-Scripts/main/ANIMEADVENTURE_Dressrosa'))()")
+            queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/ArponAG/Scripts/main/AnimeAdventures_v2__Beta.lua'))()")
         end
     end)
 end
@@ -2144,7 +2144,7 @@ if Settings.AutoLoadScript then
     autoload()
 end
 function autoload2()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Xhypher/My-Scripts/main/ANIMEADVENTURE_Dressrosa'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ArponAG/Scripts/main/AnimeAdventures_v2__Beta.lua'))()
 end
 if Settings.refarmc then
     autoload2() end
