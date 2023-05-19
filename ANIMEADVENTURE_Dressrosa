@@ -2142,9 +2142,9 @@ function autoload()
     pcall(function()
         local exec = tostring(identifyexecutor())
         if exec == "Synapse X" and Settings.AutoLoadScript then
-            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Xhypher/My-Scripts/main/ANIMEADVENTURE_Dressrosa'))()")
+            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Xhypher/My-Scripts/main/ANIMEADVENTURE_Dressrosa2'))()")
         elseif exec ~= "Synapse X" and Settings.AutoLoadScript then
-            queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Xhypher/My-Scripts/main/ANIMEADVENTURE_Dressrosa'))()")
+            queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Xhypher/My-Scripts/main/ANIMEADVENTURE_Dressrosa2'))()")
         end
     end)
 end
@@ -2152,7 +2152,7 @@ if Settings.AutoLoadScript then
     autoload()
 end
 function autoload2()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Xhypher/My-Scripts/main/ANIMEADVENTURE_Dressrosa'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Xhypher/My-Scripts/main/ANIMEADVENTURE_Dressrosa2'))()
 end
 if Settings.refarmc then
     autoload2() end
