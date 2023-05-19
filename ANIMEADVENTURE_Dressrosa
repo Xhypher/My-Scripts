@@ -1652,12 +1652,11 @@ local function unitconfig()
         reunitcon()
     end)
     --//UNIT 1
-    --//UNIT 1
-   --[[ Unit1:Cheat("Textbox", "Placement Priority", function(Value)
+    Unit1:Cheat("Textbox", "Placement Priority", function(Value)
         Value = tonumber(Value)
         Settings.U1_UnPlace = Value
         saveSettings()
-    end, {placeholder = Settings.U1_UnPlace})]]
+    end, {placeholder = Settings.U1_UnPlace})
     Unit1:Cheat("Textbox", "Place from wave", function(Value)
         Value = tonumber(Value)
         Settings.U1_Wave = Value
@@ -1668,11 +1667,11 @@ local function unitconfig()
         Settings.U1_TotalAmmount = Value
         saveSettings()
     end, {placeholder = Settings.U1_TotalAmmount})
-   --[[ Unit1:Cheat("Textbox", "Upgrade Priority", function(Value)
+    Unit1:Cheat("Textbox", "Upgrade Priority", function(Value)
         Value = tonumber(Value)
         Settings.U1_UpgPro = Value
         saveSettings()
-    end, {placeholder = Settings.U1_UpgPro})]]
+    end, {placeholder = Settings.U1_UpgPro})
     Unit1:Cheat("Textbox", "Upgrade from wave", function(Value)
         Value = tonumber(Value)
         Settings.U1_UpgWave = Value
@@ -1682,7 +1681,7 @@ local function unitconfig()
         Value = tonumber(Value)
         Settings.U1_UpgCap = Value
         saveSettings()
-    end, {placeholder = Settings.U1_UpgCap})]]
+    end, {placeholder = Settings.U1_UpgCap})
     Unit1:Cheat("Textbox", "Auto Sell at wave", function(Value)
         Value = tonumber(Value)
         Settings.U1_SellWave = Value
