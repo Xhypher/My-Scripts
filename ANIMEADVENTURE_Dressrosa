@@ -2488,7 +2488,7 @@ local function startfarming()
                     [3] = { ["friends_only"] = getgenv().isFriendOnly } }
                 game:GetService("ReplicatedStorage").endpoints.client_to_server.use_portal:InvokeServer(unpack(args))
                 
-                task.wait(1.0)
+                task.wait(1.2)
                 for i,v in pairs(game:GetService("Workspace")["_PORTALS"].Lobbies:GetDescendants()) do
                     if v.Name == "Owner" and tostring(v.value) == game.Players.LocalPlayer.Name then
                         local args = { [1] = tostring(v.Parent.Name) }
