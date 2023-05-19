@@ -2485,7 +2485,7 @@ local function startfarming()
             elseif level == "portal_item__dressrosa" then
                 local args = {
                     [1] = GetPortals("portal_item__dressrosa")[1]["uuid"],
-                    [2] = { ["friends_only"] = getgenv().isFriendOnly } }
+                    [3] = { ["friends_only"] = getgenv().isFriendOnly } }
                 game:GetService("ReplicatedStorage").endpoints.client_to_server.use_portal:InvokeServer(unpack(args))
                 
                 task.wait(1.0)
