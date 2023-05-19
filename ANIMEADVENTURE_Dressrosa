@@ -2484,7 +2484,7 @@ local function startfarming()
                 --OPN fixportal		
             elseif level == "portal_item__dressrosa" then
                 local args = {
-                    [1] = GetPortals("portal_item__dressrosa")[2]["uuid"],
+                    [1] = GetPortals("portal_item__dressrosa")[1]["uuid"],
                     [2] = { ["friends_only"] = getgenv().isFriendOnly } }
                 game:GetService("ReplicatedStorage").endpoints.client_to_server.use_portal:InvokeServer(unpack(args))
                 
