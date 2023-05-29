@@ -1838,11 +1838,11 @@ local function unitconfig()
         saveSettings()
     end, {placeholder = Settings.U5_UpgWave})
         
-    --[[Unit5:Cheat("Textbox", "Upgrade Cap", function(Value)
+    Unit5:Cheat("Textbox", "Upgrade Cap", function(Value)
         Value = tonumber(Value)
         Settings.U5_UpgCap = Value
         saveSettings()
-    end, {placeholder = Settings.U5_UpgCap})]]
+    end, {placeholder = Settings.U5_UpgCap})
         
     Unit5:Cheat("Textbox", "Auto Sell at wave", function(Value)
         Value = tonumber(Value)
@@ -1878,11 +1878,11 @@ local function unitconfig()
         saveSettings()
     end, {placeholder = Settings.U6_UpgWave})
     
-    --[[Unit6:Cheat("Textbox", "Upgrade Cap", function(Value)
+    Unit6:Cheat("Textbox", "Upgrade Cap", function(Value)
         Value = tonumber(Value)
         Settings.U6_UpgCap = Value
         saveSettings()
-    end, {placeholder = Settings.U6_UpgCap})]]
+    end, {placeholder = Settings.U6_UpgCap})
     
     Unit6:Cheat("Textbox", "Auto Sell at wave", function(Value)
         Value = tonumber(Value)
