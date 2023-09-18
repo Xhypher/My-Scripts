@@ -3440,7 +3440,7 @@ end)
     end, { options = {"Rare","Epic","Legendary","Mythic"}, default = Settings.SelectedSellRarity3})
 
     Settings.SelectedSellRarity4 = Settings.SelectedSellRarity4 or "Rare"
-    SummerSkin:Cheat("Dropdown", "🎚️ Select Rarity 3",function(value)
+    SummerSkin:Cheat("Dropdown", "🎚️ Select Rarity 4",function(value)
         warn("Change to : "..value)
         Settings.SelectedSellRarity4 = value
         saveSettings()
