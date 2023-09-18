@@ -3418,12 +3418,33 @@ end)
         saveSettings()
     end,{options = TableSeason, default = Settings.SelectedSellSeason})
 
-    Settings.SelectedSellRarity = Settings.SelectedSellRarity or "Rare"
-    SummerSkin:Cheat("Dropdown", "🎚️ Select Rarity",function(value)
+    Settings.SelectedSellRarity1 = Settings.SelectedSellRarity1 or "Rare"
+    SummerSkin:Cheat("Dropdown", "🎚️ Select Rarity 1",function(value)
         warn("Change to : "..value)
-        Settings.SelectedSellRarity = value
+        Settings.SelectedSellRarity1 = value
         saveSettings()
-    end, { options = {"Rare","Epic","Legendary","Mythic"}, default = Settings.SelectedSellRarity})
+    end, { options = {"Rare","Epic","Legendary","Mythic"}, default = Settings.SelectedSellRarity1})
+
+    Settings.SelectedSellRarity2 = Settings.SelectedSellRarity2 or "Rare"
+    SummerSkin:Cheat("Dropdown", "🎚️ Select Rarity 2",function(value)
+        warn("Change to : "..value)
+        Settings.SelectedSellRarity2 = value
+        saveSettings()
+    end, { options = {"Rare","Epic","Legendary","Mythic"}, default = Settings.SelectedSellRarity2})
+
+    Settings.SelectedSellRarity3 = Settings.SelectedSellRarity3 or "Rare"
+    SummerSkin:Cheat("Dropdown", "🎚️ Select Rarity 3",function(value)
+        warn("Change to : "..value)
+        Settings.SelectedSellRarity3 = value
+        saveSettings()
+    end, { options = {"Rare","Epic","Legendary","Mythic"}, default = Settings.SelectedSellRarity3})
+
+    Settings.SelectedSellRarity4 = Settings.SelectedSellRarity4 or "Rare"
+    SummerSkin:Cheat("Dropdown", "🎚️ Select Rarity 3",function(value)
+        warn("Change to : "..value)
+        Settings.SelectedSellRarity4 = value
+        saveSettings()
+    end, { options = {"Rare","Epic","Legendary","Mythic"}, default = Settings.SelectedSellRarity4})
 
     SummerSkin:Cheat("Checkbox","Auto Sell Skins ", function(bool)
         print(bool)
@@ -3436,15 +3457,17 @@ end)
             if Settings.AutoSellSskin then
                 for i,v in pairs(get_inventory_items_unique_items()) do
                     if string.find(v['item_id'],"_skin") then
-                        if SummerSkinTable[v['item_id']].rarity == Settings.SelectedSellRarity and string.find(v['item_id'],Settings.SelectedSellSeason:lower()) then
+                        if SummerSkinTable[v['item_id']].rarity == Settings.SelectedSellRarity1 
+                        or SummerSkinTable[v['item_id']].rarity == Settings.SelectedSellRarity2 
+                        or SummerSkinTable[v['item_id']].rarity == Settings.SelectedSellRarity3
+                        or SummerSkinTable[v['item_id']].rarity == Settings.SelectedSellRarity4
+                        and string.find(v['item_id'],Settings.SelectedSellSeason:lower()) then
                             local args = {
                                 [1] = {
                                     [1] = v["uuid"]
                                 }
                             }
                             game:GetService("ReplicatedStorage").endpoints.client_to_server.delete_unique_items:InvokeServer(unpack(args))
-                            --warn("Sell Skin")
-                            --warn("Sell " ..tostring(Settings.SelectedSellSeason) .. " Skin "  ..tostring(Settings.SelectedSellRarity))
                             warn("Sell : " ..tostring(v['item_id']) .. " | "  ..tostring(Settings.SelectedSellSeason) .. " | "  ..tostring(Settings.SelectedSellRarity))
                             wait(0.1)
                         end
