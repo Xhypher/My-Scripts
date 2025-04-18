@@ -95,3 +95,11 @@ autoButton.MouseButton1Click:Connect(function()
 		autoButton.BackgroundColor3 = Color3.fromRGB(80, 200, 80)
 	end
 end)
+
+-- Ensure the script runs immediately when the game loads
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xhypher/My-Scripts/main/zoomers.lua"))()
+
+-- Wait until the game is fully loaded
+if not game:IsLoaded() then
+    game.Loaded:Wait() -- Wait for the game to finish loading before running the script
+end
