@@ -1,0 +1,97 @@
+local player = game.Players.LocalPlayer
+local camera = workspace.CurrentCamera
+
+-- === CAMERA SETTINGS ===
+-- Camera position (adjust as needed to fit the map layout)
+local targetPosition = Vector3.new(-39.436988830566406, 4.2611236572265625, -40.12059020996094)
+local zoomOutOffset = Vector3.new(0, 10, 0)  -- Camera sits above and behind
+local cameraPosition = targetPosition + zoomOutOffset
+
+-- === DIRECTION TO LOOK (Adjusted to face the map like in 2nd image)
+local lookDirection = Vector3.new(0, -0.2, -1) -- Slight downward angle toward front
+local lookAtPosition = cameraPosition + lookDirection
+
+-- === AUTO MODE ===
+local followInterval = 5 -- seconds between auto-fix
+local autoRelaunchEnabled = false
+
+-- === GUI SETUP ===
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "FixedCameraUI"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = player:WaitForChild("PlayerGui")
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 300, 0, 150)
+frame.Position = UDim2.new(0, 30, 0, 30)
+frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+frame.BorderSizePixel = 2
+frame.Active = true
+frame.Draggable = true
+frame.Parent = screenGui
+
+-- === Create Buttons ===
+local function createButton(text, posY, color)
+	local btn = Instance.new("TextButton")
+	btn.Size = UDim2.new(0, 280, 0, 40)
+	btn.Position = UDim2.new(0, 10, 0, posY)
+	btn.Text = text
+	btn.BackgroundColor3 = color
+	btn.TextColor3 = Color3.new(1, 1, 1)
+	btn.Font = Enum.Font.SourceSansBold
+	btn.TextSize = 20
+	btn.Parent = frame
+	return btn
+end
+
+local fixButton = createButton("Fix Camera", 10, Color3.fromRGB(50, 150, 255))
+local stopButton = createButton("Stop Camera", 60, Color3.fromRGB(200, 80, 80))
+local autoButton = createButton("Enable Auto-Relaunch", 110, Color3.fromRGB(80, 200, 80))
+
+-- === CAMERA FUNCTIONS ===
+local function fixCamera()
+	player.CameraMode = Enum.CameraMode.Classic
+	player.CameraMinZoomDistance = 128
+	player.CameraMaxZoomDistance = 128
+	camera.CameraType = Enum.CameraType.Scriptable
+	camera.CFrame = CFrame.new(cameraPosition, lookAtPosition)
+end
+
+local function stopCamera()
+	camera.CameraType = Enum.CameraType.Custom
+	player.CameraMinZoomDistance = 0.5
+	player.CameraMaxZoomDistance = 128
+end
+
+local function autoRelaunchLoop()
+	while autoRelaunchEnabled do
+		fixCamera()
+		wait(followInterval)
+	end
+end
+
+-- === BUTTON CALLBACKS ===
+fixButton.MouseButton1Click:Connect(function()
+	if not autoRelaunchEnabled then
+		fixCamera()
+	end
+end)
+
+stopButton.MouseButton1Click:Connect(function()
+	stopCamera()
+	autoRelaunchEnabled = false
+	autoButton.Text = "Enable Auto-Relaunch"
+	autoButton.BackgroundColor3 = Color3.fromRGB(80, 200, 80)
+end)
+
+autoButton.MouseButton1Click:Connect(function()
+	autoRelaunchEnabled = not autoRelaunchEnabled
+	if autoRelaunchEnabled then
+		autoButton.Text = "Disable Auto-Relaunch"
+		autoButton.BackgroundColor3 = Color3.fromRGB(255, 165, 0)
+		coroutine.wrap(autoRelaunchLoop)()
+	else
+		autoButton.Text = "Enable Auto-Relaunch"
+		autoButton.BackgroundColor3 = Color3.fromRGB(80, 200, 80)
+	end
+end)
