@@ -128,23 +128,3 @@ local function createUI()
 end
 
 createUI()
-
--- Autoload script handling
-function autoload()
-    pcall(function()
-        local exec = tostring(identifyexecutor())
-        if exec == "Synapse X" and _G.Settings.AutoLoadScript then
-            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Xhypher/My-Scripts/main/zoomers.lua'))()")
-        elseif exec ~= "Synapse X" and _G.Settings.AutoLoadScript then
-            queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Xhypher/My-Scripts/main/zoomers.lua'))()")
-        end
-    end)
-end
-
-if _G.Settings.AutoLoadScript then
-    autoload()
-end
-
-function autoload2()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Xhypher/My-Scripts/main/zoomers.lua'))()
-end
