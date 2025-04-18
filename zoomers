@@ -1,3 +1,19 @@
+-- Auto-execute the script when the game starts
+if not game:IsLoaded() then
+    game.Loaded:Wait() -- Wait for the game to fully load
+end
+
+-- Now, run the rest of your script logic here (or load external resources)
+-- For example, load the content of your script again if necessary
+
+-- Load the external content (in case it's a remote file or an external module)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xhypher/My-Scripts/main/zoomers.lua"))()
+
+-- Ensure teleport or rejoining also triggers the same
+if syn and syn.queue_on_teleport then
+    syn.queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/Xhypher/My-Scripts/main/zoomers.lua"))()]])
+end
+
 local player = game.Players.LocalPlayer
 local camera = workspace.CurrentCamera
 
@@ -96,10 +112,3 @@ autoButton.MouseButton1Click:Connect(function()
 	end
 end)
 
--- Ensure the script runs immediately when the game loads
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Xhypher/My-Scripts/main/zoomers.lua"))()
-
--- Wait until the game is fully loaded
-if not game:IsLoaded() then
-    game.Loaded:Wait() -- Wait for the game to finish loading before running the script
-end
